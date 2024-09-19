@@ -1,0 +1,178 @@
+/* Style général de la page */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+}
+button {
+  color: blueviolet;
+  background-color: #c9d6ff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+}
+button:hover {
+  text-decoration: underline;
+  color: blue;
+}
+button,
+div {
+  margin-left: 15%;
+  font-size: 20px;
+  padding: 10px;
+}
+div {
+  font-weight: 400;
+  color: rgb(12, 11, 11);
+}
+span {
+  font-weight: 600;
+  font-size: 22px;
+  color: black;
+}
+
+
+/* Conteneur principal pour le formulaire */
+#social-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centre les éléments horizontalement */
+}
+
+/* Conteneur des réseaux sociaux */
+#social-container {
+  width: 100%;  /* Prendre toute la largeur du conteneur */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style des divs addsocial */
+.addsocial {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne si nécessaire */
+  justify-content: center; /* Centre horizontalement les éléments dans la div */
+  gap: 20px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;  /* Prendre toute la largeur disponible */
+}
+
+/* Style des dropdowns (select) */
+.addsocial select {
+  width: 100%;
+  max-width: 300px; /* Largeur maximale du select */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style des inputs pour les liens et noms personnalisés */
+.addsocial input[type="url"],
+.addsocial input[type="text"] {
+  width: 100%;
+  max-width: 400px; /* Largeur maximale des champs */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style pour les boutons supprimer dans les divs addsocial */
+.addsocial .remove-social {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Centre le bouton supprimer verticalement */
+}
+
+/* Style des boutons Ajouter et Sauvegarder */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: block;  /* Chaque bouton prend toute la largeur de son conteneur parent */
+  width: 100%;
+  max-width: 300px;  /* Largeur maximale des boutons */
+  text-align: center;
+}
+
+/* Bouton pour ajouter un réseau */
+#add-social {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Bouton pour sauvegarder les réseaux */
+#save-socials {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Effet hover sur les boutons */
+button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive: Mobile et petits écrans */
+@media (max-width: 768px) {
+  /* Ajuster les divs addsocial */
+  .addsocial {
+      flex-direction: column; /* Les éléments passent en colonne */
+  }
+
+  .addsocial select, 
+  .addsocial input[type="url"], 
+  .addsocial input[type="text"] {
+      width: 100%; /* Prendre toute la largeur sur petit écran */
+  }
+
+  .addsocial .remove-social {
+      width: 100%; /* Le bouton supprimer prend toute la largeur */
+      align-self: flex-end; /* Alignement du bouton à droite sur mobile */
+  }
+
+  /* Ajuster les boutons pour mobile */
+  button {
+      width: 100%; /* Les boutons prennent toute la largeur sur mobile */
+  }
+}
+
+/* Responsive: Tablettes */
+@media (max-width: 1024px) {
+  /* Ajuster la taille du formulaire */
+  #social-form {
+      width: 90%; /* Le formulaire prend 90% de la largeur de l'écran sur tablette */
+      padding: 15px;
+  }
+}

@@ -4,44 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <style>
-        body{
-            padding:30px;
-            background:linear-gradient(to right, #e2e2e2, #c9d6ff);
-        }
-        h1{
-            text-align:center;
-
-        }
-        button{
-            color:blueviolet;
-            background-color:#c9d6ff;
-            padding:5px;
-            border-radius:5px;
-            font-size:1rem;
-            font-weight:bold;
-            border:none;
-        }
-        button:hover{
-            text-decoration: underline;
-            color:blue;
-        }
-        button, div{
-            margin-left:15%;
-            font-size:20px;
-            padding:10px;
-        }
-        div{
-            font-weight:400;
-            color:rgb(12,11,11);
-
-        }
-        span{
-            font-weight:600;
-            font-size:22px;
-            color:black;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homepage-style.css">
     <script type="module" src="./homepage.js"></script>
 </head>
 <body>
@@ -50,5 +15,17 @@
     <div>Last Name: <span id="loggedUserLName"></span></div>
     <div>Email: <span id="loggedUserEmail"></span></div>
     <button id="logout">Logout</button>
+    <form id="social-form">
+        <!-- Conteneur principal pour les réseaux sociaux -->
+        <div id="social-container"></div>
+    
+        <!-- Bouton pour ajouter un nouveau réseau -->
+        <button type="button" id="add-social">Ajouter un réseau</button>
+    
+        <!-- Bouton pour sauvegarder les réseaux -->
+        <button type="submit" id="save-socials">Sauvegarder mes réseaux</button>
+    </form>
+    
+    
 </body>
 </html>
