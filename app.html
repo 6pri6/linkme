@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree - Page utilisateur</title>
+
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="app.css">
+
+    <!-- CDN Vue.js -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- Firebase CDN -->
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Conteneur pour le nom de l'utilisateur -->
+        <h1>{{ user.displayName }}</h1>
+
+        <!-- Conteneur pour les réseaux sociaux -->
+        <div class="social-links">
+            <button v-for="link in user.socialLinks" :key="link.network" @click="goTo(link.link)">
+                {{ link.customName }} ({{ link.network }})
+            </button>
+        </div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript externe -->
+    <script src="app.js"></script>
+</body>
+</html>
